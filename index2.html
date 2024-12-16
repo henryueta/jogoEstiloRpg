@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   
+<audio id="passos" src="audio/step_soundwav-14903.mp3"></audio>
+<audio id="teclas" src="audio/keyboard5-88069.mp3"></audio>
+<audio id="acertou"src="audio/8-bit-game-2-186976.mp3"></audio>
+<audio id="errou"src="audio/reject-interface-sound-201948.mp3"></audio>
+<audio id="informa" src="audio/beepd-86247.mp3"></audio>
+<audio id="pegando" src="audio/item-pickup-37089.mp3"></audio>
+<audio id="finalizado"src="audio/beep-6-96243.mp3"></audio>
+
+
+<div id="carregando"></div>
+<div class="tela">
+    
+
+</div>
+
+
+
+
+<div class="comandos" id="comando">
+    
+    <div class="vertical">
+    <button id="cima" ><img src="seta-direita.png"></button>
+    <button id="baixo" ><img src="seta-direita.png"></button>
+    </div>
+ 
+    <div id="item">
+<div class="dispositivo">
+        <textarea type="text" id="escrita" placeholder="/comando + especificações" name="respostaUsuario" maxlength="135" disabled></textarea>
+    <div class="opcoes">
+
+        
+
+<button class="clique" value="Q" name="jj"><p>Q</p></button><!-- 1 -->
+<button class="clique" value="A" name="000"><p>A</p></button><!-- 2 -->
+<button class="clique" value="Z"><p>Z</p></button><!-- 3 -->
+<button class="clique" value="O"><p>O</p></button><!-- O -->
+<button class="clique" value="3"><p>3</p></button><!-- 3 -->
+<button class="clique" value="W"><p>W</p></button><!-- w -->
+<button class="clique" value="S"><p>S</p></button><!-- s -->
+<button class="clique" value="X"><p>X</p></button><!-- x -->
+<button class="clique" value="P"><p>P</p></button><!-- P -->
+<button class="clique" value="4"><p>4</p></button><!-- 4 -->
+<button class="clique" value="E"><p>E</p></button><!-- e-->
+<button class="clique" value="D"><p>D</p></button><!-- d -->
+<button class="clique" value="C"><p>C</p></button><!-- c -->
+<button class="clique" value="L"><p>L</p></button><!-- L -->
+<button class="clique" value="5"><p>5</p></button><!-- 5 -->
+<button class="clique" value="R"><p>R</p></button><!-- r -->
+<button class="clique" value="F"><p>F</p></button><!--f -->
+<button class="clique" value="V"><p>V</p></button><!-- v -->
+<button class="clique" value="Ç"><p>Ç</p></button><!-- Ç -->
+<button class="clique" value="6"><p>6</p></button><!-- 6-->
+<button class="clique" value="T"><p>T</p></button><!-- t -->
+<button class="clique" value="G"><p>G</p></button><!-- g -->
+<button class="clique" value="B"><p>B</p></button><!-- b -->
+<button class="clique" value="0"><p>0</p></button><!-- 0 -->
+<button class="clique" value="7"><p>7</p></button><!-- 7 -->
+<button class="clique" value="Y"><p>Y</p></button> <!-- y -->
+<button class="clique" value="H"><p>H</p></button> <!-- h -->
+<button class="clique" value="N"><p>N</p></button><!-- n -->
+<button class="clique" value="1"><p>1</p></button><!-- 1 -->
+<button class="clique" value="8"><p>8</p></button><!-- 8 -->
+<button class="clique" value="U"><p>U</p></button><!-- u -->
+<button class="clique" value="J"><p>J</p></button><!-- j -->
+<button class="clique" value="M"><p>M</p></button><!-- m -->
+<button class="clique" value="2"><p>2</p></button><!-- 2-->
+<button class="clique" value="9"><p>9</p></button> <!-- 9 -->
+<button class="clique" value="I"><p>I</p></button> <!-- i -->
+<button class="clique" value="K"><p>K</p></button> <!-- k -->
+
+
+
+<button class="clique" value="/"><p>/</p></button> <!-- 28 -->
+<button class="clique" value="+"><p>+</p></button> <!-- 28 -->
+<button class="clique" value="-"><p>-</p></button> <!-- 28 -->
+
+
+
+    </div>
+    <div class="maisOpcoes">
+    <button id="apagar" ><p>ERASE</p></button> <!-- 29 --> 
+<button class="clique" id="espaco"value="_" onclick="pressionado.play();"></button>
+<button id="enviar" onclick="verificar()"><p>ENTER</p></button>
+
+</div>
+
+    </div>
+        </div>
+
+
+    <div class="horizontal">
+    <button id="esquerda"><img src="seta-direita.png"></button>
+    <button id="rapido"></button>
+    <button id="direita" ><img src="seta-direita.png"></button>
+    </div>
+ 
+    <div class="acoes">
+    <button id="uso1"><p>A</p></button>
+    <button id="uso2" onclick="computador()"><p>B</p></button>
+    </div>
+    
+
+    </div>
+
+  
+
+    <div id="perso" ></div>
+    
+<div class="area1"  id="sala1">
+
+<div class="dados" id="circulo"></div>    
+   
+
+<div class="objetos">
+</div>
+
+
+<div class="piso">
+    <div></div>
+    <div></div>
+    <div></div>
+    
+</div>
+
+</div>
+
+<div class="area2" id="sala2">
+    <div class="objetos">
+        <div><p id="valor1"></p></div>
+        <div><p id="valor2"></p></div>
+        <div><p id="valor3"></p></div>
+        <div><p id="valor4"></p></div>
+    </div>
+
+    <div id="armario">
+<div></div>
+<div></div>
+    </div>
+    <div class="parede"></div>
+    
+<div class="piso">
+    <div></div>
+    <div></div>
+    <div></div>
+  
+</div>
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
